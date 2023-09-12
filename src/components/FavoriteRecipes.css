@@ -1,0 +1,150 @@
+.favorite-ul {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.favorite-recipes-container h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+.favorite-recipes {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipes-li {
+  list-style: none;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.recipes-li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipes-li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.recipes-li:hover::before {
+  opacity: 1;
+}
+
+.favorite-recipes img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.favorite-recipes h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.ingredients-wrapper {
+  margin-top: 10px;
+}
+
+.ingredients-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.recipes-li:hover .ingredients-container {
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+.ingredients-container li {
+  margin: 5px 0;
+  word-wrap: break-word;
+}
+
+.favorite-recipes p {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.delete-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.delete-button img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.delete-button p {
+  font-weight: 600;
+}
+
+@keyframes deleteButtonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.delete-button.clicked {
+  animation: deleteButtonAnimation 0.4s ease-in-out;
+}

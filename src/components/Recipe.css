@@ -1,0 +1,109 @@
+.recipe-container {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.recipe-container:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.recipe-container h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.ingredients-wrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients-wrapper p {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.recipe-container p {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.recipe-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.recipe-container:hover::before {
+  opacity: 1;
+}
+
+.recipe-datails {
+  list-style: none;
+}
+
+.like-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.like-button img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.like-button p {
+  font-weight: 600;
+}
+
+@keyframes likeButtonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+  100% {
+    transform: scale(1); 
+}
+}
+
+.like-button.clicked {
+  animation: likeButtonAnimation 0.4s ease-in-out; 
+}
+

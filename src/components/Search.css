@@ -1,0 +1,97 @@
+.search-container {
+  background: linear-gradient(135deg, #64dd17, #00c853);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ingredients {
+  margin-bottom: 15px;
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-btn input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none; 
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #222; 
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none; 
+}
+
+input[type="checkbox"]:checked {
+  background-color: #fff;
+}
+
+input[type="submit"] {
+  background-color: #00a152;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  outline: none; 
+}
+
+input[type="submit"]:hover {
+  background-color: #007e3a;
+}
+
+.pForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pForm input {
+  margin: 0 15px;
+}
+
+.recipes-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
